@@ -8,9 +8,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 	
+	@RequestMapping("/t")
+	public ModelAndView toPage2(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("index");
+	
+        return mav;
+	}
+	
 	@RequestMapping("/test")
 	public ModelAndView toPage(){
-		System.out.println("123123123");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("test");
 	
