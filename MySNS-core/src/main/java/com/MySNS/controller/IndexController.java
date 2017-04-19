@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 	
-	@RequestMapping("/t")
+	@RequestMapping("/login")
 	public ModelAndView toPage2(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
