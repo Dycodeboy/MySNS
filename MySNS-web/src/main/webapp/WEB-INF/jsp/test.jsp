@@ -10,19 +10,19 @@
 </head>
 <body>
 
-	<c:import var="menu" url="/resource/menu.xml" />
-	<x:parse xml="${menu}" var="output" />
-	<x:forEach select="$output/menu/node" var="item">
+<c:import url="/resource/menu.xml" charEncoding="UTF-8" var="menu"/>	
+<x:parse xml="${menu}" var="output" />
+	<x:forEach select="$output/menu/nodes/node" var="item">
 
 		<x:out select="$item/name" />
 		<br />
 		<x:out select="$item/url" />
 		<br />
 		<x:if select="$item/children">
-			<x:forEach select="$item/children/node" var="c_item">
-				<x:out select="$item/name" />
+			<x:forEach select="$item/children/node" var="citem">
+				<x:out select="$citem/name" />
 				<br />
-				<x:out select="$item/url" />
+				<x:out select="$citem/url" />
 				<br />
 
 			</x:forEach>
